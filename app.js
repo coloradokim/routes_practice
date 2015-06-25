@@ -9,7 +9,7 @@ var server = http.createServer(function (req, res) {
       res.end('Thank you!')
     }
     if (req.method === 'GET') {
-      fs.readFile('./views/products/index.html', function(err, file) {
+      fs.readFile('views/products/index.html', function(err, file) {
         if (err) throw err
         res.setHeader('Content-Type', 'text/html')
         res.write(file)
@@ -19,7 +19,7 @@ var server = http.createServer(function (req, res) {
   }
   if (req.url === '/products/new') {
     if (req.method === 'GET') {
-      fs.readFile('./views/products/users.html', function(err, file) {
+      fs.readFile('views/products/users.html', function(err, file) {
         if (err) throw err
         res.setHeader('Content-Type', 'text/html')
         res.write(file)
@@ -33,7 +33,7 @@ var server = http.createServer(function (req, res) {
       res.end('Thank you!')
     }
     if (req.method === 'GET') {
-    fs.readFile('./views/users/index.html', function(err, file) {
+    fs.readFile('views/users/index.html', function(err, file) {
       if (err) throw err
       res.setHeader('Content-Type', 'text/html')
       res.write(file)
